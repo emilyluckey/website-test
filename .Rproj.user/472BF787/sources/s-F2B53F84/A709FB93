@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3875491283",
+    "hash" : "0",
     "id" : "A709FB93",
-    "lastKnownWriteTime" : 1570649935,
-    "last_content_update" : 1570649935962,
+    "lastKnownWriteTime" : 1570650321,
+    "last_content_update" : 1570650321945,
     "path" : "~/GitHub/website test/teammate.Rmd",
     "project_path" : "teammate.Rmd",
     "properties" : {
-        "cursorPosition" : "0,0",
+        "cursorPosition" : "1,0",
         "scrollLine" : "0"
     },
     "read_only" : false,
