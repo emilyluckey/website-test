@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570632970937.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2109387916",
+    "id" : "C593C09E",
+    "lastKnownWriteTime" : 1570632979,
+    "last_content_update" : 1570632979188,
+    "path" : "~/GitHub/website test/facebook.Rmd",
+    "project_path" : "facebook.Rmd",
+    "properties" : {
+        "cursorPosition" : "4,184",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

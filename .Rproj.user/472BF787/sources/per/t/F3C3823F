@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570610141772.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F3C3823F",
+    "lastKnownWriteTime" : 2314885436532011572,
+    "last_content_update" : 1570610141772,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A3C072D9",
+        "caption" : "graphData[[\"travelerFromAsia\"]]",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=A3C072D9",
+        "displayedObservations" : 105,
+        "environment" : "_rs_no_env",
+        "expression" : "graphData[[\"travelerFromAsia\"]]",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 105,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

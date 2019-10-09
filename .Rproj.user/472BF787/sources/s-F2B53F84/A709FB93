@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570632919451.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "689250936",
+    "id" : "A709FB93",
+    "lastKnownWriteTime" : 1570632944,
+    "last_content_update" : 1570632944777,
+    "path" : "~/GitHub/website test/teammate.Rmd",
+    "project_path" : "teammate.Rmd",
+    "properties" : {
+        "cursorPosition" : "4,4",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

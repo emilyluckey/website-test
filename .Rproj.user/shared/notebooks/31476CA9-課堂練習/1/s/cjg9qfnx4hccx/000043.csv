@@ -1,4 +1,0 @@
-"0","basicBoxplot +
-  scale_fill_brewer(palette=""myPalette"") # 由於色圈會由0度出發回到360度所以第1個及第5個會是同色，因此4類要創出5個顏色才不會有1,4類同色問題。
-"
-"2","Unknown palette myPalette"

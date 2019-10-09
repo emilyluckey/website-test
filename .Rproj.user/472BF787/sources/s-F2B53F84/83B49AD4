@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570613636530.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "442034375",
+    "id" : "83B49AD4",
+    "lastKnownWriteTime" : 1570632286,
+    "last_content_update" : 1570632286092,
+    "path" : "~/GitHub/course-108-1-inclass-datavisualization/課堂練習.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "270,0",
+        "scrollLine" : "262"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

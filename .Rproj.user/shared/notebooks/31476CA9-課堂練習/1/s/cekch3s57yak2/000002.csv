@@ -1,5 +1,0 @@
-"0","df_taoyuanMarriage %>%"
-"0","  gather("
-"0","    grep(""月$"",colnames(.)),"
-"0","    key = ""年份"", value = ""對數"""
-"0","  ) "

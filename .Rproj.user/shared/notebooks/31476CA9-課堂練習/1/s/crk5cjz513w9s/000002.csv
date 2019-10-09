@@ -1,0 +1,62 @@
+"0","library(dplyr); library(stringr); library(ggplot2); library(plotly); library(lubridate); library(readr); library(tidyr); library(showtext)"
+"2","
+Attaching package: ¡¥dplyr¡¦
+
+"
+"2","The following objects are masked from ¡¥package:stats¡¦:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ¡¥package:base¡¦:
+
+    intersect, setdiff, setequal, union
+
+"
+"2","Use suppressPackageStartupMessages() to eliminate
+package startup messages.
+"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","
+Attaching package: ¡¥plotly¡¦
+
+"
+"2","The following object is masked from ¡¥package:ggplot2¡¦:
+
+    last_plot
+
+"
+"2","The following object is masked from ¡¥package:stats¡¦:
+
+    filter
+
+"
+"2","The following object is masked from ¡¥package:graphics¡¦:
+
+    layout
+
+"
+"2","
+Attaching package: ¡¥lubridate¡¦
+
+"
+"2","The following object is masked from ¡¥package:base¡¦:
+
+    date
+
+"
+"2","Loading required package: sysfonts
+"
+"2","Loading required package: showtextdb
+"
+"0","font_add(""QYuan"",""cwTeXQYuan-Medium.ttf"") # æ–°å¢žå­—é«”"
+"0","showtext_auto(enable=TRUE) #å•Ÿç”¨å­—é«”"
+"0","theme_set(theme_classic())"
+"0","knitr::opts_chunk$set(out.width='80%', fig.asp=.75, fig.align='center', fig.showtext=T)"

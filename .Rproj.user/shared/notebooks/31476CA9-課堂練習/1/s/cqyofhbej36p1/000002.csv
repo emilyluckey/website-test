@@ -1,0 +1,26 @@
+"0","dataCPI <- read_csv(""https://www.dropbox.com/s/ov2bvef5o3apei0/PR0101A2Mc.csv?dl=1"")"
+"2","Parsed with column specification:
+cols(
+  X1 = [31mcol_character()[39m,
+  ��l�� = [32mcol_double()[39m
+)
+"
+"0","## 改變數名稱"
+"0","dataCPI %>% "
+"0","  dplyr::rename("
+"0","    年月=X1,"
+"0","    CPI=原始值"
+"0","  ) -> dataCPI"
+"0",""
+"0","# 移除「有NA」的row"
+"0","dataCPI %>% na.omit() -> dataCPI"
+"0",""
+"0","## 調整class"
+"0","dataCPI$年月 %>% str_c(""/01"") %>% #擴增為YMD表示"
+"0","  ymd() -> dataCPI$年月"
+"0",""
+"0","# 改成2003M1為基期,其指數為100"
+"0","dataCPI %>% filter(年月==ymd(""2003-01-01"")) %>% "
+"0","  select(CPI) -> CPI2003M1"
+"0","dataCPI %>% "
+"0","  mutate(CPI=CPI/CPI2003M1$CPI*100) -> dataCPI2"
