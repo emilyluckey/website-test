@@ -4,9 +4,9 @@ navbar:
   title: "資料科學應用創新黑客松競賽"
   right:
     - text: "競賽說明"
-      href: index.html
-    - text: "報名資訊"
       href: about.html
+    - text: "報名資訊"
+      href: index.html
     - text: "徵尋隊友"
       href: teammate.html
     - text: "參考作品"
