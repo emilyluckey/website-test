@@ -2,7 +2,7 @@ name: "my-website"
 output_dir: "."
 navbar:
   title: "資料科學應用創新黑客松競賽"
-  left:
+  right:
     - text: "競賽說明"
       href: index.html
     - text: "報名資訊"
