@@ -1,0 +1,11 @@
+---
+title: "About This Website"
+---
+
+trying to build one lol
+
+```{r}
+library(knitr)
+
+rmarkdown::clean_site()
+```

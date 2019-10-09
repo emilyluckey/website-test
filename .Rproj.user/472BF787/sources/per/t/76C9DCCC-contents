@@ -1,0 +1,317 @@
+---
+title: "Untitled"
+author: "李靜怡"
+date: "9/25/2019"
+---
+
+```{r}
+library(dplyr); library(stringr); library(ggplot2); library(plotly); library(lubridate); library(readr); library(tidyr); library(showtext)
+
+font_add("QYuan","cwTeXQYuan-Medium.ttf") # 新增字體
+showtext_auto(enable=TRUE) #啟用字體
+theme_set(theme_classic())
+knitr::opts_chunk$set(out.width='80%', fig.asp=.75, fig.align='center', fig.showtext=T)
+```
+
+```{r}
+StuList <- list(
+  次序=c(1,2,3,4,5,6,7,8),
+  學號=c(172,214,322,425,517,833,752,114),
+  姓名=c("小明","大雄","胖虎","小新","大白","阿華","小英","阿美"),
+  性別=c("男","男","男","女","女","男","女","男"),
+  成績=c(80,42,90,82,50,77,30,90)
+  )
+StuList
+as.data.frame(StuList) -> StuDFfromList
+StuDFfromList
+```
+
+```{r}
+library(dplyr)
+StuDF <- data.frame(
+  次序=c(1,2,3,4,5,6,7,8),
+  學號=c(172,214,322,425,517,833,752,114),
+  姓名=c("小明","大雄","胖虎","小新","大白","阿華","小英","阿美"),
+  性別=c("男","男","男","女","女","男","女","男"),
+  成績=c(80,42,90,82,50,77,30,90)
+  )
+str(StuDF)
+```
+
+```{r}
+library(readr)
+collegeData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/103_student.csv")
+
+#檢查變數結構
+str(collegeData)
+
+#前4筆
+collegeData[1:4,]
+
+#後3筆
+slice(collegeData,(n()-3):(n()))
+
+#中間第101到110筆
+collegeData[101:110,]
+```
+
+```{r}
+collegeData %>%
+  mutate(
+    男生人數 = sum())
+  )
+
+
+library(stringr)
+
+colnames(collegeData)
+```
+
+```{r}
+load(url("https://www.dropbox.com/s/duh5aaqgl2f5m3z/loopTranscriptData.Rda?raw=1"))
+```
+
+```{r}
+collegeData[101:110,]
+collegeData[str_detect(colnames(collegeData),"男生")]
+library(dplyr)
+
+colnames(collegeData)[c(5,7,9,11)] -> 一到四年級男生
+
+一到四年級男生[1:4]
+
+collegeData %>%
+  mutate(
+    男生人數 = 
+  )
+
+```
+
+```{r}
+StuDF
+mutate(StuDF,
+        平均成績=mean(成績),
+        最高分=max(成績),
+        最低分=min(成績))
+```
+
+```{r}
+StuDF %>%
+  filter(
+    性別 == "女"
+  ) %>%
+  summarise(
+    平均成績 = mean(成績),
+    最高分 = max(成績),
+    最低分 = min(成績)
+  )
+```
+
+```{r}
+#1
+str_detect(
+  collegeData$縣市名稱,
+  "30"
+) %>%
+  collegeData[.,]
+
+#2
+grep(
+  "01",
+  collegeData$縣市名稱
+)
+```
+
+```{r}
+collegeData %>%
+  group_by(縣市名稱,體系別,等級別) %>%
+  summarise(
+    一年級男生人數 = sum(一年級男生),
+    一年級女生人數 = sum(一年級女生),
+    學校數目 = n()
+  )
+```
+
+```{r}
+#計算每位學生每學期的平均成績
+transcriptDataFinal %>%
+  mutate(
+    學年學期 = str_c(學年,"-",學期)
+  ) %>%
+  group_by(學號,學年學期) %>%
+  summarise(
+    平均成績 = sum(學期成績*學分數)/sum(學分數)
+  )
+
+#計算每位學生每學期學分數在必/選/通 三類的學分數比重
+transcriptDataFinal %>%
+  mutate(
+    學年學期 = str_c(學年,"-",學期)
+  ) %>%
+  group_by(學號,學年學期) %>%
+  summarise(
+    必修 = ,
+    選修 = ,
+    通識 = 
+  )
+  
+
+學屆為100（即100學年入學）的學生，各系學生在學所修總學分數之中位數，何系最高？
+```
+
+```{r}
+library(readr)
+df_taoyuanMarriage <- read_csv("https://data.tycg.gov.tw/opendata/datalist/datasetMeta/download?id=f95d1a33-ec56-44c5-a9ec-3afba8157e39&rid=fd2070ef-7431-4f9c-bc3a-82d7bfbcd2fb")
+```
+
+```{r}
+df_taoyuanMarriage %>%
+  gather(
+    grep("月$",colnames(.)),
+    key = "年份", value = "對數"
+  ) -> b
+```
+
+```{r}
+download_id_64a896aa_a6aa_4362_90fb_4270d90ff625_rid_85e11adb_c228_4b57_a7fd_1d99fb31129c <- read_csv("https://data.tycg.gov.tw/opendata/datalist/datasetMeta/download?id=64a896aa-a6aa-4362-90fb-4270d90ff625&rid=85e11adb-c228-4b57-a7fd-1d99fb31129c")
+```
+
+```{r}
+library(readr)
+subsetDataTWbank <- read_csv("https://www.dropbox.com/s/t8ulj3d7cgl8jh5/subsetDataTWbank.csv?dl=1")
+```
+
+```{r}
+library(ggplot2)
+ggplot(subsetDataTWbank)+
+  geom_point(
+    aes(x=西元年月,y=`定存利率-一個月-固定`)
+  ) +
+  geom_line(
+    aes(x=西元年月,y=`定存利率-一個月-固定`)
+  ) 
+
+subsetDataTWbank %>%
+  gather(
+    `定存利率-一個月-固定`,`定存利率-二年期-固定`,`定存利率-三年期-固定`,
+    key = "期數", value = "利率"
+  ) %>%
+  ggplot() +
+  geom_line(
+    aes(x=西元年月,y=利率)
+  )
+```
+
+```{r}
+twCalendar <- c("民國88年11月1日","民國88年12月1日","民國89年1月1日")
+
+twCalendar %>%
+  str_extract_all("[:digit:]+") %>%
+  # 將每個日期的「年」數字加上1991再合併年月日成為`yyyy-mm-dd`格式
+  purrr::map_chr(
+             function(x) {
+               x1=as.integer(x[[1]])+1911
+               x[[1]]=as.character(x1)
+               stringr::str_c(x,collapse="-")
+             }
+             ) -> westernCalendar
+```
+
+```{r}
+library(grDevices) # 不同顏色模型代碼的呈現及轉換
+library(scales) # show_col()螢幕立即顯示顏色
+library(colorspace) # 調色盤選擇及ggplot應用工具
+library(shinyjs) # 支援套件
+library(dplyr)
+```
+
+```{r}
+show_col(
+  c(hsv(0/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(0/360,0.3,0.9),
+    hsv(0/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(165/360,0.3,0.9),hsv(0/360,0.3,0.9),
+    hsv(165/360,0.3,0.9),hsv(30/360,0.13,0.9),hsv(165/360,0.3,0.9),hsv(30/360,0.13,0.9),hsv(165/360,0.3,0.9),
+    hsv(30/360,0.13,0.9),hsv(170/360,0.5,0.6),hsv(30/360,0.13,0.9),hsv(170/360,0.5,0.6),hsv(30/360,0.13,0.9),
+    hsv(30/360,0.13,0.9),hsv(30/360,0.13,0.9),hsv(30/360,0.13,0.9),hsv(30/360,0.13,0.9),hsv(30/360,0.13,0.9))
+)
+```
+
+```{r}
+library(shiny)
+choose_color()
+```
+
+```{r}
+choose_palette(gui="shiny")
+
+sequential_hcl(n = 5, h = c(261, 200), c = c(60, NA, 0), l = c(25, 95), power = c(0.7, 1.3), register = "myPalette") -> a
+show_col(a)
+```
+
+```{r}
+pal_qual <- colorspace::qualitative_hcl(
+  n = 7, 
+  h = c(100, 180), c = 45, l = 80, 
+  register = "myQualitative"
+  )
+pal_qual %>% specplot(hcl=F)
+```
+
+```{r}
+data.frame(
+  x1 = factor(sample(c(1L,2L,3L),100,replace=T)),
+  x2 = runif(100),
+  y = runif(100),
+  z1 = rnorm(100),
+  z2 = factor(sample(letters[1:4],100,replace=T))
+) -> df_example
+
+library(ggplot2)
+
+df_example %>%
+  ggplot()+
+  geom_boxplot(
+    aes(x=x1,y=y,fill=z2)
+  ) -> basicBoxplot
+basicBoxplot
+
+
+sequential_hcl(n = 5, h = c(261, 200), c = c(60, NA, 0), l = c(25, 95), power = c(0.7, 1.3),palette = "myPalette",register = "myPalette")
+show_col(b)
+
+basicBoxplot +
+  scale_fill_brewer(palette="myPalette") # 由於色圈會由0度出發回到360度所以第1個及第5個會是同色，因此4類要創出5個顏色才不會有1,4類同色問題。
+
+
+basicBoxplot +
+  scale_fill_discrete_qualitative()
+```
+
+```{r}
+library(readr)
+disposableIncome <- read_csv("https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1",
+locale = locale(encoding = "BIG5"), skip = 4)
+```
+
+```{r}
+library(dplyr)
+library(tidyr)
+colnames(disposableIncome)[[1]] <- "年份"
+
+disposableIncome %>%
+  .[-c(44:49),] -> disposableIncome
+
+as.numeric(disposableIncome$年份) -> 
+  disposableIncome$年份
+
+disposableIncome %>%
+  filter(年份 >= 2003) %>%
+  gather(
+    -1,
+    key = "組別", value = "元"
+  ) %>%
+  ggplot() +
+  geom_line(
+    aes(x=年份, y=元, color = 組別)
+  )
+```
+

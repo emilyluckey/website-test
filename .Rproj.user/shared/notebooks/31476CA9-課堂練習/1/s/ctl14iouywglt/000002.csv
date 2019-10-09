@@ -1,0 +1,12 @@
+"0","library(readr)"
+"0","subsetDataTWbank <- read_csv(""https://www.dropbox.com/s/t8ulj3d7cgl8jh5/subsetDataTWbank.csv?dl=1"")"
+"2","Parsed with column specification:
+cols(
+  »È¦æ = [31mcol_character()[39m,
+  ¦~¤ë = [31mcol_character()[39m,
+  `©w¦s§Q²v-¤@­Ó¤ë-©T©w` = [32mcol_double()[39m,
+  `©w¦s§Q²v-¤G¦~´Á-©T©w` = [32mcol_double()[39m,
+  `©w¦s§Q²v-¤T¦~´Á-©T©w` = [32mcol_double()[39m,
+  ¦è¤¸¦~¤ë = [34mcol_date(format = """")[39m
+)
+"

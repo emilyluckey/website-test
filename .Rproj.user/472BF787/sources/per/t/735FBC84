@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570333408480.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "735FBC84",
+    "lastKnownWriteTime" : 4189037521560761441,
+    "last_content_update" : 1570333408480,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B4B74603",
+        "caption" : "disposableIncome_percent",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=disposableIncome_percent&cache_key=B4B74603",
+        "displayedObservations" : 16,
+        "environment" : "",
+        "expression" : "disposableIncome_percent",
+        "object" : "disposableIncome_percent",
+        "preview" : 0,
+        "totalObservations" : 16,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

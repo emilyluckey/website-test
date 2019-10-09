@@ -1,0 +1,19 @@
+"0","library(readr)"
+"0","df_taoyuanMarriage <- read_csv(""https://data.tycg.gov.tw/opendata/datalist/datasetMeta/download?id=f95d1a33-ec56-44c5-a9ec-3afba8157e39&rid=fd2070ef-7431-4f9c-bc3a-82d7bfbcd2fb"")"
+"2","Parsed with column specification:
+cols(
+  дыеў░╧░ьзO = [31mcol_character()[39m,
+  д@ды = [32mcol_double()[39m,
+  дGды = [32mcol_double()[39m,
+  дTды = [32mcol_double()[39m,
+  е|ды = [32mcol_double()[39m,
+  днды = [32mcol_double()[39m,
+  д╗ды = [32mcol_double()[39m,
+  дCды = [32mcol_double()[39m,
+  дKды = [32mcol_double()[39m,
+  дEды = [32mcol_double()[39m,
+  дQды = [32mcol_double()[39m,
+  дQд@ды = [32mcol_double()[39m,
+  дQдGды = [32mcol_double()[39m
+)
+"

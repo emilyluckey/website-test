@@ -1,0 +1,40 @@
+"0","library(dplyr)"
+"2","Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+"
+"2","
+Attaching package: ¡¥dplyr¡¦
+
+"
+"2","The following objects are masked from ¡¥package:stats¡¦:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ¡¥package:base¡¦:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(tidyr)"
+"0","colnames(disposableIncome)[[1]] <- ""å¹´ä»½"""
+"0",""
+"0","disposableIncome %>%"
+"0","  .[-c(44:49),] -> disposableIncome"
+"0",""
+"0","as.numeric(disposableIncome$å¹´ä»½) -> "
+"0","  disposableIncome$å¹´ä»½"
+"0",""
+"0","disposableIncome %>%"
+"0","  filter(å¹´ä»½ >= 2003) %>%"
+"0","  gather("
+"0","    -1,"
+"0","    key = ""çµ„åˆ¥"", value = ""å…ƒ"""
+"0","  ) %>%"
+"0","  ggplot() +"
+"0","  geom_line("
+"0","    aes(x=å¹´ä»½, y=å…ƒ, color = çµ„åˆ¥)"
+"0","  )"
+"2","Error in ggplot(.) : could not find function ""ggplot""
+"

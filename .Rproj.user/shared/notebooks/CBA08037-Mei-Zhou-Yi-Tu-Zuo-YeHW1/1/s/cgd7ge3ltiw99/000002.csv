@@ -1,0 +1,38 @@
+"0","# è³‡æ–™å¼•å…¥"
+"0","disposableIncome <- read_csv(""https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1"","
+"0","locale = locale(encoding = ""BIG5""), skip = 4)"
+"2","Missing column names filled in: 'X1' [1]"
+"2","Parsed with column specification:
+cols(
+  X1 = [31mcol_character()[39m,
+  ¥­§¡¨C¤á¥i¤ä°t©Ò±o = [32mcol_double()[39m,
+  `¥i¤ä°t©Ò±o«ö¤á¼Æ¤­µ¥¤À¦ì²Õ-³Ì§C©Ò±o²Õ` = [32mcol_double()[39m,
+  `¥i¤ä°t©Ò±o«ö¤á¼Æ¤­µ¥¤À¦ì²Õ-¦¸§C©Ò±o²Õ` = [32mcol_double()[39m,
+  `¥i¤ä°t©Ò±o«ö¤á¼Æ¤­µ¥¤À¦ì²Õ-¤¤¶¡©Ò±o²Õ` = [32mcol_double()[39m,
+  `¥i¤ä°t©Ò±o«ö¤á¼Æ¤­µ¥¤À¦ì²Õ-¦¸°ª©Ò±o²Õ` = [32mcol_double()[39m,
+  `¥i¤ä°t©Ò±o«ö¤á¼Æ¤­µ¥¤À¦ì²Õ-³Ì°ª©Ò±o²Õ` = [32mcol_double()[39m
+)
+"
+"2","6 parsing failures.
+row col  expected    actual                                                                  file
+ 44  -- 7 columns 1 columns 'https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1'
+ 45  -- 7 columns 1 columns 'https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1'
+ 46  -- 7 columns 1 columns 'https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1'
+ 47  -- 7 columns 1 columns 'https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1'
+ 48  -- 7 columns 1 columns 'https://www.dropbox.com/s/z80sbjw94cjex8x/disposableIncome.csv?dl=1'
+... ... ......... ......... .....................................................................
+See problems(...) for more details.
+"
+"0","# è³‡æ–™è™•ç†"
+"0","colnames(disposableIncome)[-2] <- c(""å¹´ä»½"",""æœ€ä½Žæ‰€å¾—çµ„"",""æ¬¡ä½Žæ‰€å¾—çµ„"",""ä¸­é–“æ‰€å¾—çµ„"",""æ¬¡é«˜æ‰€å¾—çµ„"",""æœ€é«˜æ‰€å¾—çµ„"")"
+"0","disposableIncome <- slice(disposableIncome,28:43)"
+"0","disposableIncome[[1]] <- as.numeric(disposableIncome[[1]])"
+"0","disposableIncome_percent <-disposableIncome "
+"0","for (i in 2:7) {"
+"0","  disposableIncome_percent[[i]]<-"
+"0","  disposableIncome_percent[[i]]/disposableIncome_percent[[1,i]]"
+"0","  }"
+"0","# ä½œåœ–ç”¨è³‡æ–™ç‰©ä»¶ç”Ÿæˆ"
+"0","graphData <- list()"
+"0","graphData$disposableIncome <- disposableIncome"
+"0","graphData$disposableIncome_percent <- disposableIncome_percent"
