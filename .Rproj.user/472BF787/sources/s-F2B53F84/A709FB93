@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2696808833",
+    "hash" : "3875491283",
     "id" : "A709FB93",
-    "lastKnownWriteTime" : 1570649792,
-    "last_content_update" : 1570649792721,
+    "lastKnownWriteTime" : 1570649935,
+    "last_content_update" : 1570649935962,
     "path" : "~/GitHub/website test/teammate.Rmd",
     "project_path" : "teammate.Rmd",
     "properties" : {
-        "cursorPosition" : "7,35",
-        "scrollLine" : "1"
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
