@@ -6,7 +6,7 @@ navbar:
     - text: "競賽說明"
       href: about.html
     - text: "報名資訊"
-      href: index.html
+      href: apply_info.html
     - text: "徵尋隊友"
       href: teammate.html
     - text: "參考作品"
