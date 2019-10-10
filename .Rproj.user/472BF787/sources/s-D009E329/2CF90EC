@@ -1,18 +1,18 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1570650977961.000,
+    "created" : 1570651084308.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
-    "id" : "F02A473A",
-    "lastKnownWriteTime" : 1570656310,
-    "last_content_update" : 1570656310,
-    "path" : "~/GitHub/website test/apply_info.html",
-    "project_path" : "apply_info.html",
+    "hash" : "3889999750",
+    "id" : "2CF90EC",
+    "lastKnownWriteTime" : 1570714493,
+    "last_content_update" : 1570714493608,
+    "path" : "~/GitHub/website test/index.Rmd",
+    "project_path" : "index.Rmd",
     "properties" : {
-        "cursorPosition" : "0,0",
+        "cursorPosition" : "4,50",
         "scrollLine" : "0"
     },
     "read_only" : false,
@@ -21,5 +21,5 @@
     "relative_order" : 10,
     "source_on_save" : false,
     "source_window" : "",
-    "type" : "html"
+    "type" : "r_markdown"
 }
