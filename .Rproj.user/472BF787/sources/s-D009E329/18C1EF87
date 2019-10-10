@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2637663878",
+    "hash" : "2995762487",
     "id" : "18C1EF87",
-    "lastKnownWriteTime" : 1570714493,
-    "last_content_update" : 1570714493570,
+    "lastKnownWriteTime" : 1570716934,
+    "last_content_update" : 1570716934725,
     "path" : "~/GitHub/website test/apply_info.Rmd",
     "project_path" : "apply_info.Rmd",
     "properties" : {
-        "cursorPosition" : "3,0",
+        "cursorPosition" : "2,3",
         "scrollLine" : "0"
     },
     "read_only" : false,
