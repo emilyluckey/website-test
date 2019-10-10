@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570714789849.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4131817446",
+    "id" : "8D2DFC0A",
+    "lastKnownWriteTime" : 1570714943,
+    "last_content_update" : 1570714943652,
+    "path" : "~/GitHub/course-108-1-inclass-datavisualization/每週一圖作業-範例.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "5,17",
+        "scrollLine" : "13"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
