@@ -10,12 +10,12 @@
 
  
  <form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">立刻訂閱最新消息</button>
+  <input name="email" type="email" placeholder="輸入Email訂閱最新消息" required>
+  <button type="submit">Send</button>
 </form>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbx6UwwlN-cJtGNOC4ict13Fq6mRYJiGRBBIaLfTPkbk1h0hIVnC/exec'
+  const scriptURL = "https://script.google.com/macros/s/AKfycbx6UwwlN-cJtGNOC4ict13Fq6mRYJiGRBBIaLfTPkbk1h0hIVnC/exec"
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
