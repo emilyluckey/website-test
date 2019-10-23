@@ -1,0 +1,120 @@
+---
+title: "每週一圖作業"
+output: html_document
+params:
+  組員: ["李靜怡"]  
+  學號: ["410773095"]
+---
+
+#### 環境設定
+
+以下為老師執行時一定會存在的環境設定
+```{r basic setup, message=FALSE, echo=TRUE, eval=T}
+library(dplyr); library(stringr); library(ggplot2); library(plotly); library(lubridate); library(readr); library(tidyr); library(showtext); library(magrittr)
+font_add("QYuan","cwTeXQYuan-Medium.ttf") # 新增字體
+showtext_auto(enable=TRUE) #啟用字體
+theme_set(theme_classic())
+knitr::opts_chunk$set(out.width='80%', fig.asp=.75, fig.align='center', fig.showtext=T)
+```
+
+#### 資料處理
+
+此部份在做：
+
+  * 原始Rda資料引入（即引入**dataList**物件）；
+  
+  * 資料清理成作圖用graphData物件。
+
+請將你最原始的資料連同作業一起上傳到作業上傳網址：  
+  * 若「原始資料為網頁下載」，且下載指令寫在data cleaning chunk裡的話，可以不用上傳「資料」。  
+  * 若原始資料有很多個檔案，請先引入成data frame並存在「一個」.Rda檔裡上傳（如`example_data.Rda`檔）。  
+
+資料檔引入到進入作圖前的資料處理請寫在下面區塊，分二部份：
+
+  * 資料處理  
+  * 作圖用資料物件生成(最後形成作圖資料物件graphData)
+  
+```{r data cleaning, echo=TRUE, eval=T}
+load("myth_of_love107.rda")
+graphData <- list()
+
+ifelse(
+  myth_of_love$至今交往經驗 == "有",
+  T,F
+) -> myth_of_love$至今交往經驗
+
+myth_of_love[,-7] %>%
+  .[,-9]  -> graphData$myth_of_love
+
+graphData$myth_of_love %>%
+  group_by(
+    `你個人認為交往多長時間可以發生性行為?`,
+    `你認為大學生交往多長時間願意發生性行為?`
+  ) %>%
+  summarise(
+    總人數百分比 = n()/nrow(myth_of_love),
+    交往經驗比 = sum(至今交往經驗)/n(),
+    交往經驗 = sum(至今交往經驗),
+    人數 = n()
+  ) -> graphData$myth_of_love
+```
+
+#### 繪圖程式
+
+```{r graph, echo=T, eval=T}
+graphData$myth_of_love %>%
+  ggplot(
+    aes(x=`你個人認為交往多長時間可以發生性行為?`,
+        y=`你認為大學生交往多長時間願意發生性行為?`,
+        size = 總人數百分比,
+        alpha = 交往經驗比)
+  )+
+  geom_point() +
+  scale_size_area(
+    max_size = 10
+  ) +
+  scale_y_discrete(
+    "認為普遍大學生交往多久願意發生性行為",
+    limits = c("交往前(曖昧期)","半年內","一年內",
+               "一年以上","無論多久都不行")
+  ) +
+  scale_x_discrete(
+    "個人認為交往多久可以發生性行為",
+    limits = c("交往前(曖昧期)","半年內","一年內",
+               "一年以上","無論多久都不行")
+  ) +
+  geom_abline(intercept = 0,slope = 1,linetype="dashed",
+              alpha = 0.3,size = 1) +
+  labs(title = "大學生交往與性行為發生時間認知差異",
+       caption = "資料來源: 我大一社會學報告問卷",
+       subtitle="對群體認知v.s個人認知") +
+  theme(
+    plot.title = element_text(size = 18, hjust = 0.5),
+    plot.caption = element_text(size = 10,
+                                color = "#6D6D6D"),
+    plot.subtitle = element_text(size = 10),
+    legend.position = "none",
+    aspect.ratio = 1/1.3
+  ) +
+  annotate(
+    "text",x=5,y=1,size=3,
+    label = paste("認為他人願意發生\n性行為時間較自己早")
+  ) +
+  annotate(
+    "text",x=1.3,y=5,size=3,
+    label = paste("認為自己願意發生\n性行為時間較他人早")
+  ) -> finalplot
+finalplot
+```
+
+#### 設計說明
+說明想傳達的訊息（必要）及設計想法（非必要）。寫在***之後
+*** 
+此圖107學年度調查台北大學大學生對於交往時間與性行為發生時間的認知差異，輔助線上的點是個人認知和對群體認知相同的狀況，以點的大小表示人數、深淺代表該點的樣本中有交往經驗者的百分比。
+
+可以發現大多數人自我認知中大學生願意發生性行為的時間較自己早，但若從是否有交往經驗的角度來看反而是無交往經驗者較傾向自己願意發生性行為的時間較他人晚，或者可以說無交往經驗者普遍認為自己在整個大學生群體中對於性行為是相對保守的。
+
+```{r}
+finalplot %>%
+  ggplotly()
+```

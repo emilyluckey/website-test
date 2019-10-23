@@ -1,0 +1,7 @@
+"0","startSalaryTopCat %>% filter(
+  str_detect(大職業別,""部門"")
+"
+"2","Error: unexpected input in:
+""startSalaryTopCat %>% filter(
+  str_detect(\""
+"
