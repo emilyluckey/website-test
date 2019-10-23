@@ -15,7 +15,7 @@
 </form>
 
 <script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbx6UwwlN-cJtGNOC4ict13Fq6mRYJiGRBBIaLfTPkbk1h0hIVnC/exec"
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby6OlJbpHkShbDlSLIn1NTGyEYIFmiLjNo3FeqYuQ/exec'
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
